@@ -7,7 +7,7 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Añadir servicios al contenedor.
 
 // Las propiedades de navegación (Categoria, Vendedor, Comprador, Compra, Producto) son [JsonIgnore] y no vienen en el JSON;
 // sin esta opción, ASP.NET las exige como obligatorias y responde 400 al crear/editar Productos, Compras y DetallesCompra.
@@ -82,7 +82,7 @@ using (var scope = app.Services.CreateScope())
     await DatabaseSeeder.SeedAsync(db);
 }
 
-// Configure the HTTP request pipeline.
+// Configurar la canalización de solicitudes HTTP.
 app.UseSwagger();
 app.UseSwaggerUI();
 
